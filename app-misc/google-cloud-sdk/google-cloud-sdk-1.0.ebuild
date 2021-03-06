@@ -22,7 +22,7 @@ src_unpack() {
 src_install() {
 	dodir /usr/share/google-cloud-sdk
 	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
-	dosym bin/gcloud /usr/bin/gcloud
+	dosym ../share/google-cloud-sdk/bin/gcloud /usr/bin/gcloud
 	doman help/man/man1/*.1
 }
 
