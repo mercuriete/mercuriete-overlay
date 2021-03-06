@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -22,12 +22,15 @@ src_unpack() {
 src_install() {
 	dodir /usr/share/google-cloud-sdk
 	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
-	dosym "${D}/usr/share/google-cloud-sdk/bin/gcloud" /usr/bin/gcloud
+	dosym bin/gcloud /usr/bin/gcloud
 	doman help/man/man1/*.1
 }
 
 pkg_postrm() {
 	if [ -h /usr/bin/gcloud ]; then
-	     	rm /usr/bin/gcloud
+		rm /usr/bin/gcloud
+	fi
+	if [ -h /usr/share/google-cloud-sdk ]; then
+		rm -rf /usr/share/google-cloud-sdk
 	fi
 }
