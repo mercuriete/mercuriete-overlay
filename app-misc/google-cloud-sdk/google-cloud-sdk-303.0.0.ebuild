@@ -6,7 +6,7 @@ EAPI=6
 DESCRIPTION="Wrapper for the Google cloud SDK."
 HOMEPAGE="https://cloud.google.com/sdk/docs/install"
 SLOT="0"
-SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-101.0.0-linux-x86_64.tar.gz"
+SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${PV}-linux-x86_64.tar.gz"
 
 LICENSE="Google-Cloud-Platform"
 SLOT="0"
@@ -23,14 +23,4 @@ src_install() {
 	dodir /usr/share/google-cloud-sdk
 	cp -R "${S}/" "${D}/usr/share/" || die "Install failed!"
 	dosym ../share/google-cloud-sdk/bin/gcloud /usr/bin/gcloud
-	doman help/man/man1/*.1
-}
-
-pkg_postrm() {
-	if [ -h /usr/bin/gcloud ]; then
-		rm /usr/bin/gcloud
-	fi
-	if [ -h /usr/share/google-cloud-sdk ]; then
-		rm -rf /usr/share/google-cloud-sdk
-	fi
 }
