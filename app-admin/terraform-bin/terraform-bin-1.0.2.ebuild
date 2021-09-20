@@ -1,1 +1,1 @@
-terraform-bin-1.0.4.ebuild
+terraform-bin-0.15.3.ebuild
