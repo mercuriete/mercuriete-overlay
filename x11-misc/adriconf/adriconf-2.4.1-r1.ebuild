@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -32,7 +32,7 @@ RDEPEND="
 	x11-libs/gtk+:3
 	x11-libs/libdrm
 	x11-libs/libX11
-	wayland? ( media-libs/mesa[egl] )
+	wayland? ( media-libs/mesa[wayland] )
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
