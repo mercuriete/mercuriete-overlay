@@ -18,7 +18,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: install portage
       run: emerge-webrsync
-    - name: install repoman
-      run: emerge app-portage/repoman
-    - name: repoman checks
-      run: repoman -dx full
+    - name: install pkgcheck
+      run: emerge dev-util/pkgcheck
+    - name: pkgcheck
+      run: pkgcheck ci
+# uncomment when we fixed all warnings 
+#    - name: pkgcheck
+#      run: pkgcheck ci --exit error,warning,style
