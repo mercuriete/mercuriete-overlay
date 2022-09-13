@@ -5,7 +5,7 @@
 
 EAPI=7
 
-inherit unpacker eutils desktop xdg-utils
+inherit unpacker desktop xdg-utils wrapper
 
 DESCRIPTION="Extreme performance and stability test for PC hardware"
 HOMEPAGE="https://benchmark.unigine.com/heaven"
