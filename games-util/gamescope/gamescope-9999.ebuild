@@ -6,7 +6,7 @@ EAPI=7
 PYTHON_COMPAT=( python3_{7..9} )
 
 MYMESONARGS="--wrap-mode nofallback --force-fallback-for libliftoff"
-inherit meson
+inherit meson git-r3
 
 DESCRIPTION="Micro-compositor formerly known as steamcompgr"
 HOMEPAGE="https://github.com/Plagman/gamescope"
@@ -14,13 +14,10 @@ HOMEPAGE="https://github.com/Plagman/gamescope"
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/Plagman/gamescope.git"
 	EGIT_SUBMODULES=( subprojects/libliftoff )
-	inherit git-r3
 else
 	EGIT_REPO_URI="https://github.com/Plagman/gamescope.git"
 	EGIT_COMMIT=${PV}
 	EGIT_SUBMODULES=( subprojects/libliftoff )
-	inherit git-r3
-	KEYWORDS="~amd64"
 fi
 
 LICENSE="BSD-2"

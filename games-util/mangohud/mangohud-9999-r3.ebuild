@@ -3,9 +3,9 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6..10} )
+PYTHON_COMPAT=( python3_{6..11} )
 
-inherit meson distutils-r1 multilib-minimal flag-o-matic
+inherit meson distutils-r1 multilib-minimal
 
 DESCRIPTION="A Vulkan and OpenGL overlay for monitoring."
 HOMEPAGE="https://github.com/flightlessmango/MangoHud"
@@ -34,10 +34,11 @@ SLOT="0"
 IUSE="+dbus debug +X xnvctrl wayland video_cards_nvidia"
 
 REQUIRED_USE="
-	^^ ( X wayland )
+	|| ( X wayland )
 	xnvctrl? ( video_cards_nvidia )"
 
-BDEPEND="dev-python/mako[${PYTHON_USEDEP}]"
+BDEPEND="dev-python/mako[${PYTHON_USEDEP}]
+	app-arch/unzip"
 
 DEPEND="
 	dev-util/glslang
