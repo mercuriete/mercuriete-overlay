@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}"
 
+DEPEND="app-arch/unzip"
+
 src_unpack() {
 	if [ ${A} != "" ]; then
 		unpack ${A}
