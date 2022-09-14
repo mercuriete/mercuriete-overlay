@@ -28,5 +28,7 @@ for i in $EBUILDS
 do
   echo $i
   echo "=$i ~amd64" > /etc/portage/package.accept_keywords/zz-autounmask
-  emerge "=$i" --pretend --autounmask --autounmask-write --autounmask-backtrack=y
+  emerge "=$i" --autounmask --autounmask-write --autounmask-backtrack=y || true
+  echo yes | etc-update --automode -3
+  emerge "=$i" --pretend || exit 1
 done
