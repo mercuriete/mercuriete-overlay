@@ -3,6 +3,7 @@
 
 EAPI=7
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{6..11} )
 
 inherit meson distutils-r1 multilib-minimal
