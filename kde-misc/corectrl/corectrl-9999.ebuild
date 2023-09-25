@@ -45,3 +45,5 @@ BDEPEND="
 
 PATCHES=(
 )
+
+S=${WORKDIR}/${PN}-v${PV}
