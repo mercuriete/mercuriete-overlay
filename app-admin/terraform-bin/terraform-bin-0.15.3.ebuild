@@ -9,7 +9,6 @@ SLOT="0"
 SRC_URI="https://releases.hashicorp.com/terraform/${PV}/terraform_${PV}_linux_amd64.zip"
 
 LICENSE="MPL-2.0"
-SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}"
 

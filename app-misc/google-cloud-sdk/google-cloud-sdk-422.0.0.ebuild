@@ -9,7 +9,6 @@ SLOT="0"
 SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${PV}-linux-x86_64.tar.gz"
 
 LICENSE="Google-Cloud-Platform"
-SLOT="0"
 KEYWORDS="~amd64"
 S="${WORKDIR}/google-cloud-sdk"
 
