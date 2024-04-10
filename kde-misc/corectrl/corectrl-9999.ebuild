@@ -19,7 +19,6 @@ fi
 LICENSE="MIT"
 SLOT="0/9999"
 IUSE="+pcinames"
-REQUIRED_USE=""
 
 DEPEND="
 	dev-qt/qtcore:5
@@ -39,7 +38,7 @@ RDEPEND="
 	pcinames? ( sys-apps/hwdata )
 "
 BDEPEND="
-	dev-util/cmake
+	dev-build/cmake
 	virtual/pkgconfig
 "
 
