@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     container: gentoo/stage3:amd64-systemd
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: install portage
       run: emerge-webrsync
     - name: install pkgcheck
