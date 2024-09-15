@@ -22,3 +22,5 @@ jobs:
       run: emerge dev-util/pkgcheck
     - name: pkgcheck
       run: pkgcheck ci --exit error,warning,style
+    - name: emerge all ebuilds
+      run: ./.github/emerge-all-ebuilds.sh
