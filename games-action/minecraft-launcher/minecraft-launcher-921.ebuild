@@ -10,10 +10,10 @@ HOMEPAGE="https://www.minecraft.net/"
 SRC_URI="https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_${PV}.tar.gz -> ${P}.tar.gz
 	https://launcher.mojang.com/download/minecraft-launcher.svg"
 
-KEYWORDS="~amd64 ~x86"
+S="${WORKDIR}/${PN}"
 LICENSE="Mojang"
 SLOT="2"
-
+KEYWORDS="~amd64 ~x86"
 RESTRICT="bindist mirror"
 
 RDEPEND="
@@ -41,8 +41,6 @@ RDEPEND="
 	x11-libs/libXtst
 	x11-libs/xcb-util
 "
-
-S="${WORKDIR}/${PN}"
 
 QA_PREBUILT="
 	/usr/bin/minecraft-launcher

@@ -5,12 +5,11 @@ EAPI=6
 
 DESCRIPTION="Calculate infrastructure costs"
 HOMEPAGE="https://www.infracost.io/"
-SLOT="0"
 SRC_URI="https://github.com/zricethezav/gitleaks/releases/download/v${PV}/gitleaks-linux-amd64 -> gitleaks-linux-amd64-${PV}"
-
-LICENSE="Apache-2.0"
-KEYWORDS="~amd64"
 S="${WORKDIR}"
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="~amd64"
 
 src_install() {
 	dodir /opt/gitleaks

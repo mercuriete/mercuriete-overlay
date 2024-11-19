@@ -5,11 +5,11 @@ EAPI=6
 
 DESCRIPTION="Calculate infrastructure costs"
 HOMEPAGE="https://www.infracost.io/"
-SLOT="0"
 SRC_URI="https://github.com/infracost/infracost/releases/download/v${PV}/infracost-linux-amd64.tar.gz -> infracost-linux-amd64-${PV}.tar.gz"
-LICENSE="Apache-2.0"
-KEYWORDS="~amd64"
 S="${WORKDIR}"
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="~amd64"
 
 src_unpack() {
 	if [ ${A} != "" ]; then

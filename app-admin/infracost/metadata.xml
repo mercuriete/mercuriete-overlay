@@ -5,4 +5,7 @@
 		<email>desktop-misc@gentoo.org</email>
 		<name>Gentoo Desktop Miscellaneous Project</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">infracost/infracost</remote-id>
+	</upstream>
 </pkgmetadata>
