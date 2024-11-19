@@ -16,6 +16,7 @@ else
 	KEYWORDS="~amd64 ~arm64 ~x86"
 fi
 
+S=${WORKDIR}/${PN}-v${PV}
 LICENSE="MIT"
 SLOT="0/9999"
 IUSE="+pcinames"
@@ -44,5 +45,3 @@ BDEPEND="
 
 PATCHES=(
 )
-
-S=${WORKDIR}/${PN}-v${PV}

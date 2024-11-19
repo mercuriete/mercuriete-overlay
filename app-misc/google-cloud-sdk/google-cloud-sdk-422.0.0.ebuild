@@ -5,12 +5,11 @@ EAPI=6
 
 DESCRIPTION="Wrapper for the Google cloud SDK."
 HOMEPAGE="https://cloud.google.com/sdk/docs/install"
-SLOT="0"
 SRC_URI="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${PV}-linux-x86_64.tar.gz"
-
-LICENSE="Google-Cloud-Platform"
-KEYWORDS="~amd64"
 S="${WORKDIR}/google-cloud-sdk"
+LICENSE="Google-Cloud-Platform"
+SLOT="0"
+KEYWORDS="~amd64"
 
 src_unpack() {
 	if [ ${A} != "" ]; then

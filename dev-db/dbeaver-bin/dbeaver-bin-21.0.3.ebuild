@@ -10,14 +10,13 @@ HOMEPAGE="http://dbeaver.io/"
 
 SRC_URI="http://dbeaver.io/files/${PV}/dbeaver-ce-${PV}-linux.gtk.x86_64.tar.gz"
 
+S="${WORKDIR}/dbeaver"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND=">=x11-libs/gtk+-2:2"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/dbeaver"
 
 src_install() {
 	local dir="/opt/${PN}"

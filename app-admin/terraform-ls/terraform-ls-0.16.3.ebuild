@@ -5,12 +5,11 @@ EAPI=6
 
 DESCRIPTION="Experimental version of Terraform language server"
 HOMEPAGE="https://github.com/hashicorp/terraform-ls"
-SLOT="0"
 SRC_URI="https://releases.hashicorp.com/terraform-ls/${PV}/terraform-ls_${PV}_linux_amd64.zip"
-
-LICENSE="MPL-2.0"
-KEYWORDS="~amd64"
 S="${WORKDIR}"
+LICENSE="MPL-2.0"
+SLOT="0"
+KEYWORDS="~amd64"
 
 DEPEND="app-arch/unzip"
 
