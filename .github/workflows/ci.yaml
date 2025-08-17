@@ -14,6 +14,8 @@ jobs:
   repoman:
     runs-on: ubuntu-latest
     container: gentoo/stage3:amd64-systemd
+    env:
+      FEATURES: "getbinpkg binpkg-request-signature"
     steps:
     - uses: actions/checkout@v4
     - name: install portage
