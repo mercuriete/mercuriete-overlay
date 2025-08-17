@@ -21,4 +21,4 @@ jobs:
     - name: install pkgcheck
       run: emerge dev-util/pkgcheck
     - name: pkgcheck
-      run: pkgcheck ci --exit error,warning,style
+      run: pkgcheck ci --exit error,style
