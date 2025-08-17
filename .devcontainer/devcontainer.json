@@ -1,0 +1,20 @@
+{
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "postStartCommand": "./.devcontainer/postStartCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mutantdino.resourcemonitor",
+        "ms-azuretools.vscode-containers",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "anthropic.claude-code"
+      ],
+      "settings": {
+        "git.autofetch": true
+      }
+    }
+  }
+}
