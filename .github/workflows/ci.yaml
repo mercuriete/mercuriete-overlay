@@ -17,7 +17,7 @@ jobs:
     env:
       FEATURES: "getbinpkg binpkg-request-signature"
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: install portage
       run: emerge-webrsync
     - name: install pkgcheck
