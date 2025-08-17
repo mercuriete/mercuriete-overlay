@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>noreply@anthropic.com</email>
+		<name>Claude</name>
+	</maintainer>
+	<longdescription>
+		Carla is a fully-featured audio plugin host, with support for many audio 
+		drivers and plugin formats. It supports LADSPA, DSSI, LV2, VST2/3 and AU 
+		plugin formats, plus SF2 and SFZ file support. It uses JACK as the default 
+		and preferred audio driver but can also use other drivers like ALSA, 
+		PulseAudio and CoreAudio.
+	</longdescription>
+	<use>
+		<flag name="gtk2">Use gtk-2 instead of gtk-3</flag>
+		<flag name="osc">Enable Open Sound Control (OSC) support via <pkg>media-libs/liblo</pkg></flag>
+		<flag name="rdf">Enable LADSPA-RDF support via <pkg>media-libs/lilv</pkg></flag>
+		<flag name="sf2">Enable builtin SF2 sample support using <pkg>media-sound/fluidsynth</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">falkTX/Carla</remote-id>
+	</upstream>
+</pkgmetadata>
