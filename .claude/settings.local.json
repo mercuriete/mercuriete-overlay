@@ -3,14 +3,16 @@
     "allow": [
       "WebSearch",
       "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:packages.gentoo.org)",
       "WebFetch(domain:gpo.zugaina.org)",
       "WebFetch(domain:gitlab.com)",
       "WebFetch(domain:github.com)",
       "Bash(sudo pkgdev:*)",
       "Bash(sudo ebuild:*)",
       "Bash(pkgcheck:*)",
-      "Bash(git:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git add:*)",
+      "Bash(git restore:*)"
     ],
     "deny": [],
     "ask": []
