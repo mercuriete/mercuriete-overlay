@@ -10,7 +10,8 @@
       "Bash(pkgcheck scan:*)",
       "Bash(ebuild:*)",
       "Bash(sudo ebuild:*)",
-      "Bash(pkgcheck:*)"
+      "Bash(pkgcheck:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
