@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit desktop wrapper
 
@@ -16,7 +16,18 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND=">=x11-libs/gtk+-2:2"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	media-libs/alsa-lib
+	x11-libs/libXtst"
+
+QA_FLAGS_IGNORED="opt/${PN}/jre/.*"
+
+src_prepare() {
+	default
+
+	# Remove unnecessary platform-specific JNA libraries to reduce package size
+	rm -rv ./plugins/com.sun.jna_*/com/sun/jna/{aix-*,darwin-*,freebsd-*,linux-aarch64,linux-arm,linux-armel,linux-loongarch64,linux-mips64el,linux-ppc,linux-ppc64le,linux-riscv64,linux-s390x,linux-x86,openbsd-*,sunos-*,win32,win32-*} 2>/dev/null || true
+}
 
 src_install() {
 	local dir="/opt/${PN}"
