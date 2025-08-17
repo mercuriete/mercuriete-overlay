@@ -1,17 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:gitlab.com)",
-      "WebFetch(domain:gpo.zugaina.org)",
-      "WebFetch(domain:github.com)",
+      "WebSearch",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(pkgdev manifest:*)",
+      "WebFetch(domain:gpo.zugaina.org)",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:github.com)",
       "Bash(sudo pkgdev:*)",
-      "Bash(pkgcheck scan:*)",
-      "Bash(ebuild:*)",
       "Bash(sudo ebuild:*)",
       "Bash(pkgcheck:*)",
-      "WebSearch"
+      "Bash(git:*)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
