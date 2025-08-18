@@ -67,32 +67,29 @@ src_prepare() {
 	python_fix_shebang .
 }
 
-src_configure() {
-	local myconf=(
-		--prefix="${EPREFIX}/usr"
-		$(use_enable alsa)
-		$(use_enable gtk frontend)
-		$(use_enable osc liblo)
-		$(use_enable pulseaudio)
-		$(use_enable rdf lilv)
-		$(use_enable sf2 fluidsynth)
-		$(use_enable sndfile)
-		$(use_enable X x11)
+src_compile() {
+	local myemakeargs=(
+		HAVE_ALSA=$(usex alsa true false)
+		HAVE_PULSEAUDIO=$(usex pulseaudio true false)
+		HAVE_X11=$(usex X true false)
+		HAVE_LIBLO=$(usex osc true false)
+		HAVE_FLUIDSYNTH=$(usex sf2 true false)
+		HAVE_SNDFILE=$(usex sndfile true false)
+		HAVE_LILV=$(usex rdf true false)
+		PREFIX="${EPREFIX}/usr"
 	)
 
 	if use gtk; then
 		if use gtk2; then
-			myconf+=( --enable-gtk2 )
+			myemakeargs+=( HAVE_GTK2=true HAVE_GTK3=false )
 		else
-			myconf+=( --enable-gtk3 )
+			myemakeargs+=( HAVE_GTK2=false HAVE_GTK3=true )
 		fi
+	else
+		myemakeargs+=( HAVE_GTK2=false HAVE_GTK3=false )
 	fi
 
-	emake configure PREFIX="${EPREFIX}/usr" "${myconf[@]}"
-}
-
-src_compile() {
-	emake
+	emake "${myemakeargs[@]}"
 }
 
 src_install() {
