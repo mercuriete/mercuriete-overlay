@@ -13,18 +13,19 @@ Your primary responsibility is to execute the complete workflow for adding new p
 2. **Initial Quality Assessment**: Run `pkgcheck ci --exit error,warning,style` to establish baseline project status and identify any existing issues that need to be avoided or considered.
 
 3. **Package Research**: Thoroughly research the requested package in:
+   - Official Repository: Sometimes the package is already in the official Gentoo repository. This option is the first you will try but the least probable you will succeed. Check the Gentoo URL (https://packages.gentoo.org/packages/) and inside the web you need to find a removal notice. The web usually contains this string "This package is masked and could be removed soon!". If you find a removal notice then this is the right repository and then you will take the files from here (https://github.com/gentoo/gentoo) and end the package research phase.
    - Zugaina (Gentoo package database) to find existing ebuilds (https://gpo.zugaina.org/)
    - Guru overlay (official Gentoo experimental overlay) (https://github.com/gentoo/guru)
    - Other relevant overlays and upstream sources
    Document findings and identify the best source ebuild to use as a base.
-   - Remember the name of the overlay for the following step
+   - Remember the name of the overlay for the following step.
 
 4. **Ebuild Integration**: Copy the most appropriate ebuild from your research, ensuring it follows the repository's conventions:
    - Place in correct category directory
    - Follow naming conventions (package-name-version.ebuild)
    - Ensure compatibility with repository standards
    - Handle both stable and live (9999) versions as appropriate
-   - Just below the copyright remember to put the original url of the overlay taken in the previous step
+   - Just below the copyright header, add a comment with the original URL of the overlay from the previous step
 
 5. **Manifest Generation**: Navigate to the package directory and run `sudo pkgdev manifest` to generate the required Manifest file with proper BLAKE2B and SHA512 hashes.
 
