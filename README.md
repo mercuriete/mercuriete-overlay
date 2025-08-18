@@ -12,10 +12,10 @@ There is one main method for making use of this repository.
 
 You can use the Layman tool to add and sync the repository, read the instructions on the [Gentoo Wiki](https://wiki.gentoo.org/wiki/Layman#Adding_custom_repositories).
 
-The repositories.xml can be found at `https://raw.githubusercontent.com/mercuriete/mercuriete-overlay/master/repositories.xml`.
+The repositories.xml can be found at `https://raw.githubusercontent.com/mercuriete/mercuriete-overlay/main/repositories.xml`.
 
 You (I mean me) can use this command below
 
 ```
-layman -o https://raw.githubusercontent.com/mercuriete/mercuriete-overlay/master/repositories.xml -f -a mercuriete-overlay
+layman -o https://raw.githubusercontent.com/mercuriete/mercuriete-overlay/main/repositories.xml -f -a mercuriete-overlay
 ```
