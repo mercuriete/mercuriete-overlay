@@ -2,7 +2,7 @@
 
 mercuriete's Gentoo overlay
 
-[![CI](https://github.com/mercuriete/mercuriete-overlay/workflows/CI/badge.svg)](https://github.com/mercuriete/mercuriete-overlay/actions?query=branch%3A%22master%22)
+[![CI](https://github.com/mercuriete/mercuriete-overlay/workflows/CI/badge.svg)](https://github.com/mercuriete/mercuriete-overlay/actions?query=branch%3A%22main%22)
 
 ## How to use this repository?
 
