@@ -6,7 +6,7 @@ mercuriete's Gentoo overlay
 
 ## How to use this repository?
 
-There are one main method for making use of this repository.
+There is one main method for making use of this repository.
 
 ### Layman
 

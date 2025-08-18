@@ -3,8 +3,8 @@
 
 EAPI=6
 
-DESCRIPTION="Calculate infrastructure costs"
-HOMEPAGE="https://www.infracost.io/"
+DESCRIPTION="Detect and prevent secrets in git repos"
+HOMEPAGE="https://github.com/zricethezav/gitleaks"
 SRC_URI="https://github.com/zricethezav/gitleaks/releases/download/v${PV}/gitleaks-linux-amd64 -> gitleaks-linux-amd64-${PV}"
 S="${WORKDIR}"
 LICENSE="Apache-2.0"
