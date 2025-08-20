@@ -30,7 +30,7 @@ KEYWORDS="~amd64"
 IUSE="+experimental"
 
 RDEPEND="
-	>=dev-java/openjdk-17:*
+	>=virtual/jdk-17:*
 	dev-java/jansi-native
 	dev-libs/libdbusmenu
 	llvm-core/lldb
