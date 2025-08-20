@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>mpagano@gentoo.org</email>
+		<name>Mike Pagano</name>
+	</maintainer>
+	<use>
+		<flag name="experimental">Enables Wayland support preview.</flag>
+	</use>
+	<longdescription lang="en">
+		The Leading Java and Kotlin IDE. IntelliJ IDEA Ultimate Edition provides comprehensive 
+		tools for enterprise, mobile and web development with Java, Scala, Groovy, and Kotlin, 
+		including advanced features like profiling, database tools, and web development support.
+	</longdescription>
+</pkgmetadata>
